@@ -2,14 +2,14 @@ import java.util.Scanner;
 
 public class player {
     private String nome;
-    private String vida;
+    private double vida;
     private String arma;
 
     public  player () {
 
     }
 
-    public player(String arma, String vida, String nome) {
+    public player(String arma, double vida, String nome) {
         this.arma = arma;
         this.vida = vida;
         this.nome = nome;
@@ -31,11 +31,11 @@ public class player {
         this.arma = arma;
     }
 
-    public String getVida() {
+    public double getVida() {
         return vida;
     }
 
-    public void setVida(String vida) {
+    public void setVida(double vida) {
         this.vida = vida;
     }
 
@@ -43,6 +43,11 @@ public class player {
         System.out.println("Digite o nome do seu personagem: ");
         setNome(scanner.nextLine());
 
+    }
+
+    public void playerMorto() {
+        System.out.println("Você morreu");
+        System.exit(0);
     }
 
 }

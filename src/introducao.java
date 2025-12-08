@@ -210,6 +210,7 @@ public class introducao {
     public void missao01(Scanner sc) {
         // INÍCIO DA MISSÃO DO LOBO
 
+        p.setVida(100);
         System.out.println("NARRADOR:");
         System.out.println("Você caminha pela estrada norte. O vento frio corta o rosto, e um cheiro de sangue fraco paira no ar.");
         System.out.print("...");
