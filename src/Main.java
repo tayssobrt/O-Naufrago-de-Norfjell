@@ -8,9 +8,11 @@ public class Main {
 
         Scanner sc = new Scanner(System.in);
 
+        jogo j = new jogo();
         introducao intro = new introducao();
         intro.iniciar(sc);
         intro.missao01(sc);
+        j.chegadaAIlhaVerde(sc);
 
         }
 }

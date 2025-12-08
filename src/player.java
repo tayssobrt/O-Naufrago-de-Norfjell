@@ -42,7 +42,6 @@ public class player {
     public void criarPersonagem(Scanner scanner) {
         System.out.println("Digite o nome do seu personagem: ");
         setNome(scanner.nextLine());
-
     }
 
     public void playerMorto() {
