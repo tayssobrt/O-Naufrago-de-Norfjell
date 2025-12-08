@@ -49,4 +49,31 @@ public class player {
         System.exit(0);
     }
 
+    public void ataque() {
+
+        switch(getArma()) {
+            case "Espada":
+                    double dano = 10 + 3;
+                break;
+            case "Machado":
+                 dano = 10 + 5;
+                 dano = Math.random() * dano;
+                break;
+            case "Lança":
+                dano = 10 + 2;
+                dano = Math.random() * dano;
+                break;
+            case "Adagas":
+                dano = 10 + 1;
+                dano = Math.random() * dano;
+                break;
+            default:
+                dano = 10;
+                dano = Math.random() * dano;
+                break;
+        }
+
+    }
+
+
 }
