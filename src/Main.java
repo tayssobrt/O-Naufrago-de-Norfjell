@@ -10,7 +10,7 @@ public class Main {
 
         introducao intro = new introducao();
         intro.iniciar(sc);
-
+        intro.missao01(sc);
 
         }
 }

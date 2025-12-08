@@ -2,6 +2,8 @@ import java.util.Scanner;
 
 public class introducao {
 
+    player p = new player();
+
     public void iniciar(Scanner sc) {
 
         System.out.println("----------------------");
@@ -97,18 +99,22 @@ public class introducao {
             case 1:
                 System.out.println("Você:");
                 System.out.println("Espada. Nada muito elegante, só o básico.");
+                p.setArma("Espada");
                 break;
             case 2:
                 System.out.println("Você:");
                 System.out.println("Machado. Se vier na minha direção, eu corto.");
+                p.setArma("Machado");
                 break;
             case 3:
                 System.out.println("Você:");
                 System.out.println("Lança. Mantém distância, é isso que importa.");
+                p.setArma("Lança");
                 break;
             case 4:
                 System.out.println("Você:");
                 System.out.println("Adagas. Rápido, silencioso... preciso de movimento.");
+                p.setArma("Adagas");
                 break;
             default:
                 System.out.println("Você:");
@@ -179,7 +185,7 @@ public class introducao {
         System.out.println();
 
         if(ajuda == 1) {
-            System.out.println("Você:");
+            System.out.println("p.getNome()");
             System.out.println("Esse lobo... você o viu?");
             System.out.print("...");
             sc.nextLine();
@@ -199,6 +205,128 @@ public class introducao {
             sc.nextLine();
             System.out.println();
         }
+    }
 
+    public void missao01(Scanner sc) {
+        // INÍCIO DA MISSÃO DO LOBO
+
+        System.out.println("NARRADOR:");
+        System.out.println("Você caminha pela estrada norte. O vento frio corta o rosto, e um cheiro de sangue fraco paira no ar.");
+        System.out.print("...");
+        sc.nextLine();
+        System.out.println();
+
+        System.out.println("NARRADOR:");
+        System.out.println("O lobo aparece... enorme, com pelos desgrenhados e olhos vermelhos brilhando.");
+        System.out.print("...");
+        sc.nextLine();
+        System.out.println();
+
+        System.out.println("Lobo:");
+        System.out.println("*Rugido feroz ecoando entre as árvores*");
+        System.out.print("...");
+        sc.nextLine();
+        System.out.println();
+
+// FALA DO JOGADOR VARIADA PELA ARMA
+        switch(p.getArma()) {
+            case "Espada":
+                System.out.println("Você:");
+                System.out.println("Com a espada em punho, vou perfurar o coração dessa fera.");
+                break;
+            case "Machado":
+                System.out.println("Você:");
+                System.out.println("Com o machado pronto, vou esmagar o que vier até mim.");
+                break;
+            case "Lança":
+                System.out.println("Você:");
+                System.out.println("Com a lança, mantenho distância. Puxem-se para trás.");
+                break;
+            case "Adagas":
+                System.out.println("Você:");
+                System.out.println("Adagas na mão. Vou tentar cortar e sair antes que ele contra-ataque.");
+                break;
+            default:
+                System.out.println("Você:");
+                System.out.println("Sem arma certa, vou improvisar e confiar na sorte.");
+                break;
+        }
+        System.out.print("...");
+        sc.nextLine();
+        System.out.println();
+
+        System.out.println("NARRADOR:");
+        System.out.println("A luta é rápida e brutal. O lobo ataca com ferocidade, mas você conhece sua arma.");
+        System.out.print("...");
+        sc.nextLine();
+        System.out.println();
+
+        switch(p.getArma()) {
+            case "Espada":
+                System.out.println("NARRADOR:");
+                System.out.println("Você desfere um golpe limpo com a espada, abrindo o flanco do lobo. Ele cambaleia e cai.");
+                break;
+            case "Machado":
+                System.out.println("NARRADOR:");
+                System.out.println("Você levanta o machado e desce com toda a força — o impacto faz o lobo tombar.");
+                break;
+            case "Lança":
+                System.out.println("NARRADOR:");
+                System.out.println("Com a lança você crava o ferro no peito do lobo, mantendo distância segura enquanto a fera sucumbe.");
+                break;
+            case "Adaga":
+                System.out.println("NARRADOR:");
+                System.out.println("Você salta para perto, fincando uma adaga entre as costelas, depois recua para evitar a mordida final.");
+                break;
+            default:
+                System.out.println("NARRADOR:");
+                System.out.println("Você luta com o que tem, consegue ferir o animal e, por sorte, ele cai.");
+                break;
+        }
+        System.out.print("...");
+        sc.nextLine();
+        System.out.println();
+
+        System.out.println("NARRADOR:");
+        System.out.println("O lobo cai. Entre seus dentes, algo metálico brilha.");
+        System.out.print("...");
+        sc.nextLine();
+        System.out.println();
+
+        System.out.println("Jogador:");
+        System.out.println("O que é isso...? Parece... parte do casco de um navio?");
+        System.out.print("...");
+        sc.nextLine();
+        System.out.println();
+
+        System.out.println("NARRADOR:");
+        System.out.println("Você pega o fragmento. Ele é liso, serrado... claramente cortado por mãos humanas.");
+        System.out.print("...");
+        sc.nextLine();
+        System.out.println();
+
+        System.out.println("Garon:");
+        System.out.println("Mostre isso pra mim. Já vi essas marcas antes.");
+        System.out.print("...");
+        sc.nextLine();
+        System.out.println();
+
+        System.out.println("Jogador:");
+        System.out.println("Talvez tenha sido sabotagem... por que um lobo teria isso?");
+        System.out.print("...");
+        sc.nextLine();
+        System.out.println();
+
+        System.out.println("Garon:");
+        System.out.println("Navios estão sumindo. Dizem que alguém está derrubando barcos de propósito...");
+        System.out.print("...");
+        sc.nextLine();
+        System.out.println();
+
+        System.out.println("NARRADOR:");
+        System.out.println("Com o fragmento em mãos, você retorna para Porthar. A vila observa, curiosa e apreensiva.");
+        System.out.print("...");
+        sc.nextLine();
+        System.out.println();
     }
 }
