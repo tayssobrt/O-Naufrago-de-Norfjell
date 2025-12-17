@@ -8,11 +8,15 @@ public class Main {
 
         Scanner sc = new Scanner(System.in);
 
+        combate c = new combate();
         jogo j = new jogo();
         introducao intro = new introducao();
-        intro.iniciar(sc);
-        intro.missao01(sc);
-        j.chegadaAIlhaVerde(sc);
+        player p = new player();
+        Inimigo i = new Inimigo();
 
+        intro.iniciar(sc, p);
+        intro.missao01(sc, p);
+        j.chegadaAIlhaVerde(sc);
+        c.lutar(p, i);
         }
 }

@@ -4,7 +4,7 @@ public class introducao {
 
     player p = new player();
 
-    public void iniciar(Scanner sc) {
+    public void iniciar(Scanner sc, player p) {
 
         System.out.println("----------------------");
         System.out.println("Bem-vindo ao NorfJell!");
@@ -118,7 +118,8 @@ public class introducao {
                 break;
             default:
                 System.out.println("Você:");
-                System.out.println("Eu... não sei. Mas vou descobrir no caminho.");
+                System.out.println("Eu... não sei. Vou pegar uma espada então.");
+                p.setArma("Espada"); // Define uma arma padrão
                 break;
         }
         System.out.print("...");
@@ -207,7 +208,7 @@ public class introducao {
         }
     }
 
-    public void missao01(Scanner sc) {
+    public void missao01(Scanner sc, player p) {
         // INÍCIO DA MISSÃO DO LOBO
 
         p.setVida(100);

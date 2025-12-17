@@ -3,17 +3,6 @@ import java.util.Scanner;
 public class ramificacao {
 
     public void ProcurarNavio(Scanner sc) {
-        System.out.println("Garon:");
-        System.out.println("O que pretende fazer daqui pra frente?");
-        System.out.println("1 - Tentar entender o que aconteceu com meu navio.");
-        System.out.println("2 - Procurar trabalho na vila.");
-        System.out.println("3 - Ir embora sozinho e sobreviver por conta própria.");
-        System.out.print("Escolha: ");
-        int escolha1 = sc.nextInt();
-        sc.nextLine();
-        System.out.println();
-
-        if(escolha1 == 1) {
             System.out.println("Elda:");
             System.out.println("Então sua memória não voltou… isso é preocupante. Talvez algo no acidente te afetou.");
             System.out.print("...");
@@ -24,7 +13,8 @@ public class ramificacao {
             System.out.println("Se quer respostas, comece falando com os pescadores ao norte. Eles viram algo na noite da tempestade.");
             System.out.print("...");
             sc.nextLine();
-        }
+            jogo j = new jogo();
+            j.NovamentePraia(sc);
 
     }
 

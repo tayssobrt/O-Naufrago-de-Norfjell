@@ -1,6 +1,10 @@
 import java.util.Scanner;
 
 public class jogo {
+    public int escolha1;
+    player p = new player();
+    combate c = new combate();
+    Inimigo i = new Inimigo();
 
     public void chegadaAIlhaVerde(Scanner sc) {
 
@@ -39,7 +43,7 @@ public class jogo {
         System.out.println("1 - Tentar entender o que aconteceu com meu navio.");
         System.out.println("2 - Ir embora sozinho e sobreviver por conta própria.");
         System.out.print("Escolha: ");
-        int escolha1 = sc.nextInt();
+        escolha1 = sc.nextInt();
         sc.nextLine();
         System.out.println();
         if (escolha1 == 1) {
@@ -54,7 +58,6 @@ public class jogo {
     }
 
     public void NovamentePraia(Scanner sc) {
-
         System.out.println("Garon:");
         System.out.println("Certo. Vamos voltar à praia onde te encontrei. Talvez algo do naufrágio tenha ficado por lá.");
         System.out.print("...");
@@ -187,7 +190,7 @@ public class jogo {
         System.out.print("...");
         sc.nextLine();
         System.out.println();
-
+        combateLobo(p, sc);
     }
 
     public void combateLobo(player p, Scanner sc) {
@@ -228,9 +231,6 @@ public class jogo {
         System.out.println("[3] Defender");
         System.out.print("Escolha: ");
         int escolha = sc.nextInt();
-
-
-
         System.out.println();
 
         switch (escolha) {
@@ -243,6 +243,7 @@ public class jogo {
                 System.out.println();
                 System.out.println("Narrador:");
                 System.out.println("Você avança velozmente e corta o flanco do lobo!");
+                c.lutar(p, i);
                 break;
 
             case 2:
@@ -254,6 +255,7 @@ public class jogo {
                 System.out.println();
                 System.out.println("Narrador:");
                 System.out.println("Você ergue a arma com força e desce um golpe poderoso!");
+                c.lutar(p, i);
                 break;
 
             case 3:
@@ -265,6 +267,7 @@ public class jogo {
                 System.out.println();
                 System.out.println("Narrador:");
                 System.out.println("Você levanta os braços, tentando absorver o impacto da investida!");
+                c.lutar(p, i);
                 break;
 
             case 4:
@@ -276,11 +279,13 @@ public class jogo {
                 System.out.println();
                 System.out.println("Narrador:");
                 System.out.println("Você salta para o lado, tentando escapar das presas mortais!");
+                c.lutar(p, i);
                 break;
 
             default:
                 System.out.println("Narrador:");
                 System.out.println("Você hesita… e o lobo avança com violência!");
+                c.lutar(p, i);
                 break;
         }
 

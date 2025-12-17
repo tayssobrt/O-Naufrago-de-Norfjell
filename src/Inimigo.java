@@ -1,14 +1,14 @@
 import java.util.Random;
 
-public class inimigo {
+public class Inimigo {
     private String nome;
-    private String vida;
-    private String dano;
+    private int vida;
+    private double dano;
 
-    public inimigo() {
+    public Inimigo() {
     }
 
-    public inimigo(String nome, String vida, String dano) {
+    public Inimigo(String nome, int vida, double dano) {
         this.nome = nome;
         this.vida = vida;
         this.dano = dano;
@@ -22,19 +22,19 @@ public class inimigo {
         this.nome = nome;
     }
 
-    public String getVida() {
+    public int getVida() {
         return vida;
     }
 
-    public void setVida(String vida) {
+    public void setVida(int vida) {
         this.vida = vida;
     }
 
-    public String getDano() {
+    public double getDano() {
         return dano;
     }
 
-    public void setDano(String dano) {
+    public void setDano(double dano) {
         this.dano = dano;
     }
 
